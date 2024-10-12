@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     height: 100%; /* Stellt sicher, dass der html- und body-Tag die volle Höhe einnehmen */
     font-family: Arial, sans-serif;
-    background-image: url('77BFAB60-9745-46AF-826B-0409CA0998D5.jpeg'); /* Bild im Hauptverzeichnis */
+    background-image: url('IMG_0018.jpeg'); /* Bild im Hauptverzeichnis */
     background-size: cover;
     background-position: top center; /* Zeigt nur den oberen Teil des Bildes */
     background-repeat: no-repeat;
