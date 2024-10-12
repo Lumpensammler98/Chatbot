@@ -25,7 +25,7 @@ const disallowedItems = [
     'socke', 'socken', 'gummistiefel', 'skischuh', 'skischuhe', 'hartes spielzeug', 'bauklotz', 'bauklötze', 'baustein', 'bausteine',
     'brettspiel', 'brettspiele', 'plastik-spielzeug', 'spielzeug', 'spielzeuge', 'spielware', 'inlineskate', 'garn', 'spule',
     'einzelner schuh', 'einzelne schuhe', 'schaumstoffkissen', 'schaumstoffdecken', 'matratze', 'matratzen',
-    'schnittrest', 'hausmüll', 'cd', 'cds', 'geschirr', 'metallprodukt', 'porzellan', 'kaputter schuh', 'kaputte schuhe'
+    'schnittrest', 'hausmüll', 'cd', 'cds', 'geschirr', 'metall','Lumpen', 'porzellan', 'kaputter schuh', 'kaputte schuhe'
 ];
 
 function preprocessInput(input) {
