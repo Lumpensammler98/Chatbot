@@ -5,7 +5,7 @@ html, body {
     font-family: Arial, sans-serif;
     background-image: url('77BFAB60-9745-46AF-826B-0409CA0998D5.jpeg'); /* Bild im Hauptverzeichnis */
     background-size: cover;
-    background-position: top; /* Nur den oberen Teil des Bildes anzeigen */
+    background-position: top center; /* Zeigt nur den oberen Teil des Bildes */
     background-repeat: no-repeat;
     background-attachment: fixed; /* Fixiert das Bild, damit es beim Scrollen an Ort und Stelle bleibt */
     color: #333;
@@ -80,5 +80,6 @@ html, body {
 
     body {
         background-size: cover; /* Beibehaltung der Abdeckung für Mobilgeräte */
+        background-position: top center; /* Sicherstellen, dass der obere Teil sichtbar bleibt */
     }
 }
