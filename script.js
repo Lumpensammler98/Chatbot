@@ -17,7 +17,7 @@ const disallowedItems = [
     // Bisherige nicht erlaubte Gegenstände
     'elektrogerät', 'müll', 'gefährliche stoff', 'batterie', 'chemikalien',
     'glas', 'kunststoff', 'papier', 'restmüll', 'möbelstück', 'teppich','Besteck','Kleiderbügel',
-    'Arbeitskleidung','Bilder','Kabel','Bücher','Spiel''Essen','Süsses','plastik','
+    'Arbeitskleidung','Bilder','Kabel','Bücher','Spiel''Essen','Süsses','plastik',
     // Neue Gegenstände
     'hygieneartikel', 'medizinischer abfall', 'maske', 'medizinisches werkzeug',
     'stoffwindel', 'einlage', 'nasse kleidung', 'verschmutzte kleidung', 'befleckte kleidung',
