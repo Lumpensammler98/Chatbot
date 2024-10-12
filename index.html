@@ -1,66 +1,18 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-}
-
-.chat-container {
-    width: 400px;
-    max-width: 90%;
-    margin: 50px auto;
-    background-color: #fff;
-    border-radius: 5px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#chatbox {
-    padding: 20px;
-    height: 400px;
-    overflow-y: auto;
-}
-
-.bot-message, .user-message {
-    margin-bottom: 15px;
-}
-
-.bot-message p, .user-message p {
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.bot-message p {
-    background-color: #e1f5fe;
-    color: #0277bd;
-}
-
-.user-message p {
-    background-color: #c8e6c9;
-    color: #2e7d32;
-    text-align: right;
-}
-
-.input-container {
-    display: flex;
-    border-top: 1px solid #ccc;
-}
-
-#userInput {
-    flex: 1;
-    border: none;
-    padding: 15px;
-    font-size: 16px;
-}
-
-#sendBtn {
-    background-color: #0277bd;
-    color: #fff;
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-}
-
-#sendBtn:hover {
-    background-color: #02669b;
-}
-
-<link rel="stylesheet" href="css/styles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Stelle sicher, dass der Pfad stimmt -->
+</head>
+<body>
+    <div class="chat-container">
+        <div id="chatbox"></div>
+        <div class="input-container">
+            <input type="text" id="userInput" placeholder="Type a message...">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+</body>
+</html>
