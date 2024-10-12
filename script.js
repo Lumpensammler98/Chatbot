@@ -25,7 +25,7 @@ const disallowedItems = [
     'socke', 'socken', 'gummistiefel', 'skischuh', 'skischuhe', 'hartes spielzeug', 'bauklotz', 'bauklötze', 'baustein', 'bausteine',
     'brettspiel', 'brettspiele', 'plastik-spielzeug', 'spielzeug', 'spielzeuge', 'spielware', 'inlineskate', 'garn', 'spule',
     'einzelner schuh', 'einzelne schuhe', 'schaumstoffkissen', 'schaumstoffdecken', 'matratze', 'matratzen',
-    'schnittrest', 'hausmüll', 'cd', 'cds', 'geschirr', 'metall','Lumpen', 'porzellan', 'kaputter schuh', 'kaputte schuhe'
+    'schnittrest', 'hausmüll', 'cd', 'cds', 'geschirr', 'metall', 'lumpen', 'porzellan', 'kaputter schuh', 'kaputte schuhe'
 ];
 
 function preprocessInput(input) {
@@ -117,12 +117,11 @@ function getBotResponse(input) {
     // Weitere Schlüsselwort-Überprüfungen
     if (
         processedInput.includes('was passiert mit der kleidung') ||
-        processedInput.includes('wird meine Kleidung wirklich weitergetragen') ||
+        processedInput.includes('wird meine kleidung wirklich weitergetragen') ||
         processedInput.includes('geschreddert') ||
-        processedInput.includes('Schredder') ||
+        processedInput.includes('schredder') ||
         processedInput.includes('verbrannt') ||
-        processedInput.includes('was passiert mit der kleidung') ||
-        processedInput.includes('Umwelt')
+        processedInput.includes('umwelt')
     ) {
         return "Wir als zertifizierter Entsorgungsfachbetrieb sammeln Ihre Kleidung ein. Ihre gute, abgegebene Kleidung wird dann sorgfältig sortiert und an Menschen in der ganzen Welt weitergegeben. Sie wird nicht geschreddert, sondern bekommt ein zweites Zuhause! Ihrer Kleidung ein zweites Leben zu schenken ist unsere Mission ❤️";
     } else if (
@@ -145,7 +144,7 @@ function getBotResponse(input) {
         return "Gern geschehen! Wenn Sie weitere Fragen haben, stehe ich Ihnen zur Verfügung.";
     } else if (
         processedInput.includes('container voll') ||
-        processedInput.includes('Altkleidercontainer voll') ||
+        processedInput.includes('altkleidercontainer voll') ||
         processedInput.includes('behälter voll') ||
         processedInput.includes('kleidercontainer voll')
     ) {
@@ -155,53 +154,55 @@ function getBotResponse(input) {
     }
 }
 
+// Funktionen zur Anzeige der Nachrichten
+function displayUserMessage(message) {
+    let messageElement = document.createElement('div');
+    messageElement.className = 'user-message';
+    messageElement.innerHTML = `<p>${message}</p>`;
+    chatbox.appendChild(messageElement);
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+function displayBotMessage(message) {
+    let messageElement = document.createElement('div');
+    messageElement.className = 'bot-message';
+    messageElement.innerHTML = `<p>${message}</p>`;
+    chatbox.appendChild(messageElement);
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+function generateBotResponse(userText) {
+    let botResponse = getBotResponse(userText);
+    displayBotMessage(botResponse);
+}
+
+// Zugriff auf die DOM-Elemente
+const chatbox = document.getElementById('chatbox');
+const userInput = document.getElementById('userInput');
+const sendBtn = document.getElementById('sendBtn');
+
 // Event Listener für den Send-Button
-document.addEventListener('DOMContentLoaded', () => {
-    const chatbox = document.getElementById('chatbox');
-    const userInput = document.getElementById('userInput');
-    const sendBtn = document.getElementById('sendBtn');
-
-    sendBtn.addEventListener('click', () => {
-        let userText = userInput.value.trim();
-        if (userText !== "") {
-            displayUserMessage(userText);
-            setTimeout(() => {
-                generateBotResponse(userText);
-            }, 500); // Kleine Verzögerung für realistischeres Chat-Verhalten
-            userInput.value = "";
-        }
-    });
-
-    userInput.addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') {
-            sendBtn.click();
-        }
-    });
-
-    function displayUserMessage(message) {
-        let messageElement = document.createElement('div');
-        messageElement.className = 'user-message';
-        messageElement.innerHTML = `<p>${message}</p>`;
-        chatbox.appendChild(messageElement);
-        chatbox.scrollTop = chatbox.scrollHeight;
+sendBtn.addEventListener('click', () => {
+    let userText = userInput.value.trim();
+    if (userText !== "") {
+        displayUserMessage(userText);
+        setTimeout(() => {
+            generateBotResponse(userText);
+        }, 500); // Kleine Verzögerung für realistischeres Chat-Verhalten
+        userInput.value = "";
     }
+});
 
-    function displayBotMessage(message) {
-        let messageElement = document.createElement('div');
-        messageElement.className = 'bot-message';
-        messageElement.innerHTML = `<p>${message}</p>`;
-        chatbox.appendChild(messageElement);
-        chatbox.scrollTop = chatbox.scrollHeight;
+// Event Listener für die Enter-Taste
+userInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        sendBtn.click();
     }
+});
 
-    function generateBotResponse(userText) {
-        let botResponse = getBotResponse(userText);
-        displayBotMessage(botResponse);
-    }
-
-    // Begrüßungsnachricht anzeigen
-let welcomeMessage = "Hallo! Womit kann ich Ihnen weiterhelfen? Gerne helfe ich Ihnen bei Fragen, was in den Container rein darf und was nicht. Bei welchem Kleidungsstück sind Sie sich unsicher? \
-Oder haben Sie vielleicht etwas versehentlich in den Altkleidercontainer geworfen? \
-Gerne informiere ich Sie darüber, was mit Ihrer guten Kleidung passiert. \
-Falls der Container voll ist, können Sie dies auch gerne mitteilen. Unser Team wird sich dann darum kümmern.";
+// Begrüßungsnachricht anzeigen
+let welcomeMessage = `Hallo! Womit kann ich Ihnen weiterhelfen? Gerne helfe ich Ihnen bei Fragen, was in den Container rein darf und was nicht. Bei welchem Kleidungsstück sind Sie sich unsicher?
+Oder haben Sie vielleicht etwas versehentlich in den Altkleidercontainer geworfen?
+Gerne informiere ich Sie darüber, was mit Ihrer guten Kleidung passiert.
+Falls der Container voll ist, können Sie dies auch gerne mitteilen. Unser Team wird sich dann darum kümmern.`;
 displayBotMessage(welcomeMessage);
