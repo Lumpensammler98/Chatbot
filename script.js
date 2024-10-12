@@ -69,7 +69,7 @@ function getBotResponse(input) {
         if (itemCheck.allowed) {
             return `Ja, ${itemCheck.item} dürfen Sie gerne in den Altkleidercontainer werfen. Vielen Dank für Ihren Beitrag!`;
         } else {
-            return `Leider dürfen ${itemCheck.item} nicht in das Helppack-Paket. Bitte stellen Sie sicher, dass sich diese Gegenstände nicht in Ihrem Paket befinden. Wir möchten gute Kleidung und Accessoires weitergeben und hohe Entsorgungs- und Transportkosten vermeiden. Vielen Dank für Ihr Verständnis.`;
+            return `Leider dürfen ${itemCheck.item} nicht in den Altkleidercontainer. Bitte stellen Sie sicher, dass sich diese Gegenstände nicht in Ihren Kleidersäcken befinden. Wir möchten gute Kleidung und Accessoires weitergeben um einen positiven Beitrag zu leisten. Vielen Dank für Ihr Verständnis.`;
         }
     }
 
@@ -77,7 +77,7 @@ function getBotResponse(input) {
     if (input.includes('was passiert mit der kleidung') || input.includes('was passiert mit meiner kleidung')) {
         return "Ihre gespendete Kleidung wird sortiert und an Menschen in Not weitergegeben. Sie wird nicht geschreddert, sondern bekommt ein zweites Leben!";
     } else if (input.includes('versehentlich') || input.includes('falsches objekt') || input.includes('etwas falsch eingeworfen') || input.includes('zurückholen') || input.includes('verloren')) {
-        return "Wenn Sie versehentlich etwas eingeworfen haben, das nicht in den Container gehört, kontaktieren Sie bitte unseren Kundenservice unter 01234 567890.";
+        return "Wenn Sie versehentlich etwas eingeworfen haben, das nicht in den Container gehört, kontaktieren Sie bitte unseren Kundenservice unter 0157 85559285.";
     } else if (input.includes('danke') || input.includes('vielen dank') || input.includes('dankeschön') || input.includes('super') || input.includes('gut')) {
         return "Gern geschehen! Wenn Sie weitere Fragen haben, stehe ich Ihnen zur Verfügung.";
     } else if (input.includes('was darf in den container') || input.includes('erlaubte gegenstände') || input.includes('was kann ich spenden') || input.includes('was darf ich einwerfen')) {
