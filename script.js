@@ -67,7 +67,7 @@ function getBotResponse(input) {
 
     if (itemCheck.found) {
         if (itemCheck.allowed) {
-            return `Ja, ${itemCheck.item} dürfen Sie gerne in den Altkleidercontainer werfen. Vielen Dank für Ihre Spende!`;
+            return `Ja, ${itemCheck.item} dürfen Sie gerne in den Altkleidercontainer werfen. Vielen Dank für Ihren Beitrag!`;
         } else {
             return `Leider dürfen ${itemCheck.item} nicht in das Helppack-Paket. Bitte stellen Sie sicher, dass sich diese Gegenstände nicht in Ihrem Paket befinden. Wir möchten gute Kleidung und Accessoires weitergeben und hohe Entsorgungs- und Transportkosten vermeiden. Vielen Dank für Ihr Verständnis.`;
         }
