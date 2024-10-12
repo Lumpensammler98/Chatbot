@@ -1,11 +1,13 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%; /* Stellt sicher, dass der html- und body-Tag die volle Höhe einnehmen */
     font-family: Arial, sans-serif;
     background-image: url('77BFAB60-9745-46AF-826B-0409CA0998D5.jpeg'); /* Bild im Hauptverzeichnis */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed; /* Fixiert das Bild, damit es beim Scrollen an Ort und Stelle bleibt */
     color: #333;
 }
 
