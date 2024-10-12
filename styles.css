@@ -1,11 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/77BFAB60-9745-46AF-826B-0409CA0998D5.jpeg'); /* Hintergrundbild */
+    font-family: Arial, sans-serif;
+    background-image: url('77BFAB60-9745-46AF-826B-0409CA0998D5.jpeg'); /* Bild im Hauptverzeichnis */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    color: #333;
 }
 
 .chat-container {
