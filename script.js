@@ -6,7 +6,7 @@ const allowedItems = [
     'sport- und freizeitkleidung', 'unterwäsche', 'handtasche', 'gürtel', 'handschuh',
     'schal', 'mütze', 'hut', 'pelz', 'jacke', 'mantel',
     // Schuhe (paarweise gebündelt)
-    'sportschuh', 'freizeitschuh', 'elegante schuh', 'schuh',
+    'sportschuh', 'freizeitschuh', 'elegante schuh', 'schuhe',
     // Haushaltstextilien
     'federbettdecke', 'federkissen', 'handtuch', 'tischdecke', 'vorhang'
 ];
