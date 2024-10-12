@@ -200,6 +200,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Begrüßungsnachricht anzeigen
-    let welcomeMessage = "Hallo! Womit kann ich Ihnen weiterhelfen? Gerne helfe ich Ihnen bei Fragen, was in den Altkleidercontainer darf und was nicht. Oder haben Sie vielleicht etwas versehentlich in den Altkleidercontainer geworfen? Gerne gebe ich Ihnen auch Auskunft darüber, was mit Ihrer guten Kleidung passiert. Falls der Container voll ist, können Sie dies auch gerne mitteilen. Unser Team wird sich dann darum kümmern.";
+    let welcomeMessage = "Hallo! Womit kann ich Ihnen weiterhelfen? Gerne helfe ich Ihnen bei Fragen, was in den Container rein darf und was nicht. Bei bei welchem Kleidungsstück sind Sie sich unsicher? 
+    Oder haben Sie vielleicht etwas versehentlich in den Altkleidercontainer geworfen? 
+    Gerne informiere ich Die darüber, was mit Ihrer guten Kleidung passiert. 
+    Falls der Container voll ist, können Sie dies auch gerne mitteilen. Unser Team wird sich dann darum kümmern.";
     displayBotMessage(welcomeMessage);
 });
